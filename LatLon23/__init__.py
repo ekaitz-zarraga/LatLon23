@@ -682,6 +682,10 @@ class GeoVector:
         # other is a scalar
         return GeoVector(initial_heading = self.heading, distance = self.magnitude / other)
 
+    def __truediv__(self, other):
+        # other is a scalar
+        return self.__div__(other)
+
     def __idiv__(self, other):
         # other is a scalar
         return self.__div__(other)
